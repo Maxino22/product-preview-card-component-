@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Frontend Mentor | Product preview card component</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<style>
+			/* Apply Montserrat font as default font */
+			body {
+				font-family: 'Montserrat', sans-serif;
+			}
+			/* Apply Fraunces font to headings */
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				font-family: 'Fraunces', serif;
+			}
+		</style>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							darkGreen: '#3C8067',
+							bgCream: '#F2EBE3',
+							DarkBlue: '#1C232B',
+							lightGray: '#6C7289',
+						},
+					},
+				},
+			}
+		</script>
+	</head>
+	<body>
+		<div class="bg-bgCream h-screen flex justify-center items-center">
+			<!-- card -->
+			<div class="bg-white rounded-lg">
+				<div class="flex flex-col md:flex-row rounded-xl max-w-lg">
+					<!-- image -->
+					<div class="md:w-1/2 rounded-l-lg">
+						<img
+							src="/images/image-product-mobile.jpg"
+							class="md:hidden rounded-t-lg"
+							alt=""
+						/>
+						<img
+							src="/images/image-product-desktop.jpg"
+							class="hidden rounded-l-lg md:block"
+							alt=""
+						/>
+					</div>
+					<!-- content -->
+					<div class="md:w-1/2 bg-white rounded-lg px-5 py-4">
+						<h5 class="text-lightGray mb-3">PERFUME</h5>
+						<h2 class="text-DarkBlue mb-3 text-2xl md:text-3xl">
+							Gabrielle Essence Eau De Parfume
+						</h2>
+						<p class="text-lightGray text-[14px] mb-3">
+							A floral, solar and voluptuous interpretation composed by Olivier
+							Polge, Perfumer-Creator for the House of CHANEL.
+						</p>
+						<div class="flex items-center mb-1 space-x-2">
+							<h1 class="text-darkGreen text-2xl md:text-3xl">$149.99</h1>
+							<p class="text-lightGray line-through text-sm">$169.99</p>
+						</div>
+
+						<div
+							class="flex space-x-3 bg-darkGreen justify-center items-center text-white px-2 py-2 rounded-lg"
+						>
+							<img src="./images/icon-cart.svg" alt="" />
+							<p>Add to Cart</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Preview
+
+  Gabrielle Essence Eau De Parfum
+
+  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+  Perfumer-Creator for the House of CHANEL.
+
+  $149.99
+  $169.99
+
+  Add to Cart
+   -->
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Your Name Here</a>.
+		</div>
+	</body>
+</html>
